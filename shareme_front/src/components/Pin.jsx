@@ -44,7 +44,11 @@ export default function Pin({
         }
     };
 
-    const deletePin = (id) => {};
+    const deletePin = (id) => {
+        client.delete(id).then(() => {
+            window.location.reload();
+        });
+    };
 
     return (
         <div className="m-2">
